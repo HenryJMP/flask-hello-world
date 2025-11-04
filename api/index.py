@@ -46,8 +46,6 @@ def sensor():
 def sesgar():
     return 'SesgarCLaCome'
 
-# Load environment variables from .env
-load_dotenv()
 
 
 
