@@ -41,11 +41,3 @@ def sensor():
     
     except Exception as e:
         print(f"Failed to connect: {e}")'
-
-@app.route('/sesgar')
-def sesgar():
-    return 'SesgarCLaCome'
-
-
-
-
