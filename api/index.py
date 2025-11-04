@@ -3,12 +3,13 @@ import psycopg2
 from dotenv import load_dotenv
 import os
 
-#Load enviroment variables from .env
+# Load environment variables from .env
 load_dotenv()
 
 # Fetch variables
 CONNECTION_STRING = os.getenv("CONNECTION_STRING")
-app = Flask(__name__)
+
+app = Flask(_name_)
 
 @app.route('/')
 def home():
@@ -29,7 +30,7 @@ def sensor():
         cursor = connection.cursor()
         
         # Example query
-        cursor.execute("select * from sensores;")
+        cursor.execute("SELECT * from sensores;")
         result = cursor.fetchone()
         print("Current Time:", result)
     
@@ -40,4 +41,4 @@ def sensor():
         return f"Current Time:{result}"
     
     except Exception as e:
-        print(f"Failed to connect: {e}")'
+        return f"Failed to connect: {e}"
