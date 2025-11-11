@@ -55,7 +55,7 @@ def get_sensor(sensor_id):
         cur = conn.cursor()
         cur.execute("""
             SELECT value, created_at
-            FROM sensors
+            FROM sensores
             WHERE sensor_id = %s
             ORDER BY created_at DESC
             LIMIT 10;
