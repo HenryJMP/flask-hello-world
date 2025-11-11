@@ -122,7 +122,7 @@ def users():
     return render_template(
         "index.html",
         title="Flask Render Demo",
-        user="Miguel",
+        user="Henry",
         users=users
     )
 
