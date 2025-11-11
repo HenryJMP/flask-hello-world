@@ -40,7 +40,7 @@ def insert_sensor_value(sensor_id):
     try:
         conn = get_connection()
         cur = conn.cursor()
-        cur.execute("INSERT INTO sensors (sensor_id, value) VALUES (%s, %s)", (sensor_id, value))
+        cur.execute("INSERT INTO sensores (sensor_id, value) VALUES (%s, %s)", (sensor_id, value))
         conn.commit()
         return jsonify({"message": "Inserted", "sensor_id": sensor_id, "value": value}), 201
     except Exception as e:
