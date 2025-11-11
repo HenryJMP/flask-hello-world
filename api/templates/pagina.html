@@ -1,1 +1,36 @@
-pito
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML con Estilo</title>
+    <style>
+        /* Estilo interno usando la etiqueta <style> */
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        h1 {
+            color: navy;
+            text-align: center;
+        }
+        p {
+            color: #333;
+            line-height: 1.5;
+        }
+        .destacado {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Bienvenido {{user}}</h1>
+    <p>Este es un párrafo de ejemplo con estilo interno. La fuente es sans-serif, el fondo es gris claro y el título está centrado en color navy.</p>
+    
+    <p>Este párrafo también tiene estilos de <span class="destacado">estilo interno</span>, pero el texto dentro de la etiqueta &lt;span&gt; tiene una clase llamada "destacado" y se verá de color verde y en negrita.</p>
+
+</body>
+</html>
