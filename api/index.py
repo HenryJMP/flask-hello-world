@@ -3,7 +3,7 @@ import psycopg2
 from dotenv import load_dotenv
 import os
 
-EXTERNAL_API_URL = "https://sensor-api-silk.vercel.app/sensor"
+EXTERNAL_API_URL = "https://flask-hello-world-alpha-ebon.vercel.app/sensor/"
 
 load_dotenv()
 CONNECTION_STRING = os.getenv("CONNECTION_STRING")
