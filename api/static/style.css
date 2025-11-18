@@ -40,3 +40,221 @@ canvas {
     margin-top: 20px;
     width: 100%;
 }
+/* CSS PERSONALIZADO PARA REEMPLAZAR TAILWIND 
+   Replica los estilos usados en el Dashboard IoT
+*/
+
+:root {
+    /* Paleta de Colores Tailwind aproximada */
+    --slate-100: #f1f5f9;
+    --slate-800: #1e293b;
+    
+    --blue-50: #eff6ff;
+    --blue-300: #93c5fd;
+    --blue-500: #3b82f6;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-800: #1e40af;
+
+    --red-100: #fee2e2;
+    --red-400: #f87171;
+    --red-700: #b91c1c;
+
+    --green-50: #f0fdf4;
+    --green-500: #22c55e;
+
+    --yellow-50: #fefce8;
+    --yellow-500: #eab308;
+
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    
+    --white: #ffffff;
+}
+
+/* RESET BÁSICO */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* --- UTILIDADES GENERALES --- */
+.bg-slate-100 { background-color: var(--slate-100); }
+.min-h-screen { min-height: 100vh; }
+.font-sans { font-family: ui-sans-serif, system-ui, sans-serif; }
+.bg-white { background-color: var(--white); }
+.text-white { color: var(--white); }
+.w-full { width: 100%; }
+.block { display: block; }
+.hidden { display: none; }
+
+/* --- NAVBAR --- */
+.bg-slate-800 { background-color: var(--slate-800); }
+.shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+.p-4 { padding: 1rem; }
+
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+/* Breakpoints para container */
+@media (min-width: 640px) { .container { max-width: 640px; } }
+@media (min-width: 768px) { .container { max-width: 768px; } }
+@media (min-width: 1024px) { .container { max-width: 1024px; } }
+@media (min-width: 1280px) { .container { max-width: 1280px; } }
+
+.mx-auto { margin-left: auto; margin-right: auto; }
+.flex { display: flex; }
+.justify-between { justify-content: space-between; }
+.items-center { align-items: center; }
+.items-start { align-items: flex-start; }
+.items-end { align-items: flex-end; }
+
+/* Tipografía Nav */
+.text-2xl { font-size: 1.5rem; line-height: 2rem; }
+.font-bold { font-weight: 700; }
+.tracking-wider { letter-spacing: 0.05em; }
+.mr-2 { margin-right: 0.5rem; }
+.text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+
+/* Enlaces Nav */
+.hover\:text-blue-300:hover { color: var(--blue-300); }
+.transition { transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform; transition-duration: 150ms; }
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.p-6 { padding: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+.rounded-lg { border-radius: 0.5rem; }
+.shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+.border-l-4 { border-left-width: 4px; }
+.border-blue-500 { border-color: var(--blue-500); }
+
+/* --- FORMULARIO --- */
+.text-gray-700 { color: var(--gray-700); }
+.font-semibold { font-weight: 600; }
+.mb-4 { margin-bottom: 1rem; }
+.flex-col { flex-direction: column; }
+.gap-4 { gap: 1rem; }
+.font-medium { font-weight: 500; }
+.text-gray-600 { color: var(--gray-600); }
+.mb-1 { margin-bottom: 0.25rem; }
+
+/* Inputs / Selects */
+.p-2 { padding: 0.5rem; }
+.border { border-width: 1px; border-style: solid; }
+.border-gray-300 { border-color: var(--gray-300); }
+.rounded { border-radius: 0.25rem; }
+.outline-none { outline: 2px solid transparent; outline-offset: 2px; }
+.focus\:ring-2:focus { box-shadow: 0 0 0 2px var(--white), 0 0 0 4px var(--blue-500); } /* Simulación ring */
+
+/* Botones */
+.bg-blue-600 { background-color: var(--blue-600); }
+.hover\:bg-blue-700:hover { background-color: var(--blue-700); }
+.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.duration-200 { transition-duration: 200ms; }
+
+/* --- MENSAJES DE ERROR / ALERTAS --- */
+.bg-red-100 { background-color: var(--red-100); }
+.border-red-400 { border-color: var(--red-400); }
+.text-red-700 { color: var(--red-700); }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+.relative { position: relative; }
+.mb-6 { margin-bottom: 1.5rem; }
+
+/* --- VISTA GRID (TARJETAS) --- */
+.grid { display: grid; }
+.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.gap-6 { gap: 1.5rem; }
+
+.bg-white { background-color: white; }
+.shadow { box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); }
+.hover\:shadow-lg:hover { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+.transition-shadow { transition-property: box-shadow; transition-duration: 300ms; }
+.p-5 { padding: 1.25rem; }
+
+.border-b { border-bottom-width: 1px; border-style: solid; border-color: var(--gray-200); }
+.pb-3 { padding-bottom: 0.75rem; }
+.mb-3 { margin-bottom: 0.75rem; }
+
+.text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+.text-gray-800 { color: var(--gray-800); }
+.text-xs { font-size: 0.75rem; line-height: 1rem; }
+.bg-gray-200 { background-color: var(--gray-200); }
+.px-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+.py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+
+.text-green-500 { color: var(--green-500); }
+.space-y-2 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.5rem; }
+
+.mt-4 { margin-top: 1rem; }
+.text-gray-400 { color: var(--gray-400); }
+.text-right { text-align: right; }
+
+/* --- VISTA DETALLE --- */
+.max-w-3xl { max-width: 48rem; }
+.overflow-hidden { overflow: hidden; }
+.bg-gradient-to-r { background-image: linear-gradient(to right, var(--tw-gradient-from), var(--tw-gradient-to)); }
+.from-blue-600 { --tw-gradient-from: var(--blue-600); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(37, 99, 235, 0)); }
+.to-blue-800 { --tw-gradient-to: var(--blue-800); }
+
+.text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+.opacity-80 { opacity: 0.8; }
+.text-5xl { font-size: 3rem; line-height: 1; }
+.opacity-20 { opacity: 0.2; }
+
+.p-8 { padding: 2rem; }
+.text-center { text-align: center; }
+.bg-blue-50 { background-color: var(--blue-50); }
+.bg-green-50 { background-color: var(--green-50); }
+.bg-yellow-50 { background-color: var(--yellow-50); }
+.text-blue-500 { color: var(--blue-500); }
+.mb-2 { margin-bottom: 0.5rem; }
+.text-gray-500 { color: var(--gray-500); }
+.text-yellow-500 { color: var(--yellow-500); }
+
+.mt-8 { margin-top: 2rem; }
+.border-t { border-top-width: 1px; border-style: solid; border-color: var(--gray-200); }
+.pt-4 { padding-top: 1rem; }
+.font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+
+.py-10 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+.py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+.animate-bounce { animation: bounce 1s infinite; }
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(-25%); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  50% { transform: translateY(0); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+}
+
+/* --- RESPONSIVE (Media Queries) --- */
+/* IMPORTANTE: En CSS puro, debemos escapar los dos puntos ':' con una barra invertida '\' para usar nombres de clase como md:flex-row */
+
+@media (min-width: 640px) {
+    /* sm: */
+    .sm\:inline { display: inline; }
+}
+
+@media (min-width: 768px) {
+    /* md: */
+    .md\:flex-row { flex-direction: row; }
+    .md\:w-1\/3 { width: 33.333333%; } /* Escapar la barra '/' también */
+    .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1024px) {
+    /* lg: */
+    .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
