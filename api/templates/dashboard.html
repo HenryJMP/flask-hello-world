@@ -75,8 +75,6 @@
                             </div>
                             <ul class="space-y-2 text-sm text-gray-600">
                                 <li><strong>Valor:</strong> {{ sensor.value }}</li>
-                                <li><strong>Humedad:</strong> {{ sensor.humidity }}%</li>
-                                <li><strong>Voltaje:</strong> {{ sensor.voltage }}V</li>
                             </ul>
                             <div class="mt-4 text-xs text-gray-400 text-right">
                                 {{ sensor.timestamp }}
@@ -105,16 +103,6 @@
                                     <i class="fas fa-thermometer-half text-blue-500 text-2xl mb-2"></i>
                                     <p class="text-gray-500 text-sm">Sensor Value</p>
                                     <p class="text-2xl font-bold text-gray-800">{{ data.value }}</p>
-                                </div>
-                                <div class="p-4 bg-green-50 rounded-lg">
-                                    <i class="fas fa-tint text-green-500 text-2xl mb-2"></i>
-                                    <p class="text-gray-500 text-sm">Humedad</p>
-                                    <p class="text-2xl font-bold text-gray-800">{{ data.humidity }}%</p>
-                                </div>
-                                <div class="p-4 bg-yellow-50 rounded-lg">
-                                    <i class="fas fa-bolt text-yellow-500 text-2xl mb-2"></i>
-                                    <p class="text-gray-500 text-sm">Voltaje</p>
-                                    <p class="text-2xl font-bold text-gray-800">{{ data.voltage }}V</p>
                                 </div>
                             </div>
                             
